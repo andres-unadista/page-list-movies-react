@@ -1,9 +1,17 @@
 .cardModule {
   list-style: none;
   font-size: 1.5rem;
+  text-align: center;
 }
 
 .imageCard {
   background-color: azure;
   border-radius: 10px;
+}
+
+@media (max-width: 560px) {
+  .imageCard {
+    width: 90%;
+    height: auto;
+  }
 }
