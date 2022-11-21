@@ -1,0 +1,9 @@
+.cardModule {
+  list-style: none;
+  font-size: 1.5rem;
+}
+
+.imageCard {
+  background-color: azure;
+  border-radius: 10px;
+}
