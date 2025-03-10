@@ -1,4 +1,6 @@
 import { GridMovies } from './GridMovies';
+import React from 'react';
+import Footer from './Footer';
 
 import styles from './App.module.css'
 
@@ -11,6 +13,7 @@ export function App() {
       <main>
         <GridMovies />
       </main>
+      <Footer />
     </div>
   );
 }

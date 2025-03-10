@@ -1,9 +1,32 @@
 .gridMovies {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 230px);
-  gap: 30px;
-  padding: 40px;
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.swiper {
+  width: 100%;
+  padding: 20px;
+}
+
+.swiper-slide {
+  display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 20px;
 }
 
 @media (max-width: 560px) {

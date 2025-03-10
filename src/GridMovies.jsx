@@ -1,14 +1,28 @@
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+
+import styles from './GridMovies.module.css';
+
 import { MovieCard } from './MovieCard';
 import movies from './movies.json';
-import styles from './GridMovies.module.css'
 
 export function GridMovies() {
-  console.trace(movies);
   return (
-    <ul className={styles.gridMovies}>
+    <Swiper
+      modules={[Navigation]}
+      spaceBetween={50}
+      slidesPerView={3}
+      navigation
+      onSlideChange={() => console.log('slide change')}
+      onSwiper={(swiper) => console.log(swiper)}
+    >
       {movies.map((movie) => (
-        <MovieCard key={movie.id} movie={movie}/>
+        <SwiperSlide key={movie.id}>
+          <MovieCard movie={movie} />
+        </SwiperSlide>
       ))}
-    </ul>
+    </Swiper>
   );
 }
